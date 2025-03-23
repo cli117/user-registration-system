@@ -41,7 +41,7 @@ Make sure you have the following installed on your system:
     ```
 
 3.  **Configure the application:**
-    * Create an `application.properties` or `application.yml` file in the `src/main/resources` directory.
+    * Edit the `application.yml` file in the `src/main/resources` directory.
     * Configure your database connection details (e.g., MySQL host, port, username, password, database name).
     * Configure your Redis connection details (e.g., Redis host, port).
 
@@ -50,10 +50,19 @@ Make sure you have the following installed on your system:
     spring.datasource.url=jdbc:mysql://localhost:3306/your_database_name?serverTimezone=UTC
     spring.datasource.username=your_database_username
     spring.datasource.password=your_database_password
-    spring.jpa.hibernate.ddl-auto=update
+    spring.jpa.hibernate.ddl-auto=create-drop
     spring.redis.host=localhost
     spring.redis.port=6379
     ```
+
+    **Note:** The `spring.jpa.hibernate.ddl-auto` property is currently set to `create-drop`. This setting will automatically create the database schema on application startup and drop it when the application shuts down. **This is generally used for testing and development purposes and is NOT recommended for production environments as it will erase your data.**
+
+    For other environments, you might want to use different values for `spring.jpa.hibernate.ddl-auto`, such as:
+    * `update`: Updates the schema based on the entities, without dropping existing data.
+    * `validate`: Validates the schema against the entities and throws an exception if there are discrepancies.
+    * `none`: Does not perform any schema management.
+
+    Choose the appropriate value for your specific environment.
 
 4.  **Run the application:**
     * Using Maven:
