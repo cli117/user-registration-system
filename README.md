@@ -8,7 +8,7 @@ This project implements a simple user registration and authentication system usi
 * **Spring Boot:** Framework for building the application
 * **Spring Security:** Security framework for authentication and authorization
 * **Spring Data JPA (Hibernate):** ORM for database interaction
-* **MySQL (Likely):** Relational database for storing user data
+* **MySQL:** Relational database for storing user data
 * **Redis:** In-memory data store for storing authentication tokens
 * **JUnit 5:** Framework for writing unit tests
 * **Mockito:** Mocking framework for unit tests
