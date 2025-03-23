@@ -73,7 +73,7 @@ Make sure you have the following installed on your system:
         {
             "username": "your_username",
             "password": "your_password",
-            "email": "[移除了电子邮件地址]"
+            "email": "[youremail@gmail.com]"
         }
         ```
     * **Response Body (JSON):** Returns a `SignupResponse` indicating success or failure.
