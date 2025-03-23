@@ -45,14 +45,19 @@ Make sure you have the following installed on your system:
     * Configure your database connection details (e.g., MySQL host, port, username, password, database name).
     * Configure your Redis connection details (e.g., Redis host, port).
 
-    **Example `application.properties`:**
-    ```properties
-    spring.datasource.url=jdbc:mysql://localhost:3306/your_database_name?serverTimezone=UTC
-    spring.datasource.username=your_database_username
-    spring.datasource.password=your_database_password
-    spring.jpa.hibernate.ddl-auto=create-drop
-    spring.redis.host=localhost
-    spring.redis.port=6379
+    **Example `application.yml`:**
+    ```yaml
+    spring:
+      datasource:
+        url: jdbc:mysql://localhost:3306/your_database_name?serverTimezone=UTC
+        username: your_database_username
+        password: your_database_password
+      jpa:
+        hibernate:
+          ddl-auto: create-drop
+      redis:
+        host: localhost
+        port: 6379
     ```
 
     **Note:** The `spring.jpa.hibernate.ddl-auto` property is currently set to `create-drop`. This setting will automatically create the database schema on application startup and drop it when the application shuts down. **This is generally used for testing and development purposes and is NOT recommended for production environments as it will erase your data.**
