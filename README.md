@@ -18,7 +18,7 @@ This project implements a simple user registration and authentication system usi
 
 Make sure you have the following installed on your system:
 
-* **Java Development Kit (JDK):** Version 17 or later recommended.
+* **Java Development Kit (JDK):** JDK 23 recommended. To use a different JDK version, please update the configuration in pom.xml
 * **Maven or Gradle:** Build automation tool.
 * **MySQL:** Relational database.
 * **Redis:** In-memory data store.
